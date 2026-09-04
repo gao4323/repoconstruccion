@@ -7,8 +7,7 @@ public class Producto {
     private String nombre;
     private double precio;
 
-
-    public Producto(){   
+    public Producto() {
     }
 
     public Producto(int id, String nombre, double precio) {
@@ -35,7 +34,5 @@ public class Producto {
         this.precio = precio;
     }
 
-
     
-
 }
