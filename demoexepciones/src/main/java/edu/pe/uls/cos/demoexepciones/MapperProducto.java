@@ -1,0 +1,10 @@
+package edu.pe.uls.cos.demoexepciones;
+
+import org.mapstruct.Mapper;
+
+@Mapper(  componentModel = "spring") 
+public interface MapperProducto {
+
+    Producto toProducto(RequestProducto request);
+
+}
