@@ -1,0 +1,33 @@
+<h1>Registro de ingresos</h1>
+<p class="descripcion">Vehículos que han ingresado al local el día de hoy.</p>
+
+<div class="tarjeta">
+  <table>
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>Placa</th>
+        <th>Tipo</th>
+        <th>Conductor</th>
+        <th>Hora de ingreso</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (i of ingresos; track i.id) {
+        <tr>
+          <td>{{ i.id }}</td>
+          <td><span class="placa">{{ i.placa }}</span></td>
+          <td>{{ i.tipo }}</td>
+          <td>{{ i.conductor }}</td>
+          <td>{{ i.hora }}</td>
+          <td>
+            <span class="estado" [class.en-local]="i.estado === 'En local'" [class.salio]="i.estado === 'Salió'">
+              {{ i.estado }}
+            </span>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

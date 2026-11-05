@@ -1,0 +1,38 @@
+.banner {
+  background: #1e3a8a;
+  color: white;
+  padding: 50px 40px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 36px;
+}
+
+.banner p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  max-width: 600px;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.tarjeta {
+  border-top: 4px solid #f59e0b;
+}
+
+.tarjeta h3 {
+  margin: 0 0 5px;
+  color: #1e3a8a;
+}
+
+.tarjeta p {
+  margin: 0;
+  color: #64748b;
+}

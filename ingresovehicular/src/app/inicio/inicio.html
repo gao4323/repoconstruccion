@@ -1,0 +1,14 @@
+<section class="banner">
+  <h1>Registro de Ingreso Vehicular</h1>
+  <p>Controla qué vehículos ingresan a tus instalaciones, a qué hora y con qué conductor.</p>
+  <a class="boton" routerLink="/ingresos">Ver ingresos</a>
+</section>
+
+<section class="tarjetas">
+  @for (item of items; track item.titulo) {
+    <article class="tarjeta">
+      <h3>{{ item.titulo }}</h3>
+      <p>{{ item.texto }}</p>
+    </article>
+  }
+</section>

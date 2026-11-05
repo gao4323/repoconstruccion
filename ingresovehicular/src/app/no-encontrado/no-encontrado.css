@@ -1,0 +1,17 @@
+.error {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.codigo {
+  font-size: 90px;
+  font-weight: bold;
+  color: #f59e0b;
+  margin: 0;
+  line-height: 1;
+}
+
+.mensaje {
+  color: #64748b;
+  margin-bottom: 25px;
+}
