@@ -15,19 +15,15 @@
     </thead>
     <tbody>
       @for (i of ingresos; track i.id) {
-        <tr>
-          <td>{{ i.id }}</td>
-          <td><span class="placa">{{ i.placa }}</span></td>
-          <td>{{ i.tipo }}</td>
-          <td>{{ i.conductor }}</td>
-          <td>{{ i.hora }}</td>
-          <td>
-            <span class="estado" [class.en-local]="i.estado === 'En local'" [class.salio]="i.estado === 'Salió'">
-              {{ i.estado }}
-            </span>
-          </td>
-        </tr>
-      }
+       <tr>
+        <td>{{ i.id }}</td>
+        <td>{{ i.placa }}</td>
+        <td>{{ i.tipo }}</td>
+        <td>{{ i.conductor }}</td>
+        <td>{{ i.hora }}</td>
+        <td>{{ i.estado }}</td>
+      </tr>
+      } 
     </tbody>
   </table>
 </div>
