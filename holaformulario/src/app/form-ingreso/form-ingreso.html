@@ -1,0 +1,89 @@
+<form #miForm="ngForm" (ngSubmit)="onSubmit(miForm)">
+
+<div>
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" ngModel required minlength="3" #nombre="ngModel">
+    <div class="error" *ngIf="nombre && nombre.invalid && nombre.touched">
+    <div *ngIf="nombre.errors?.['required']">Nombre es obligatorio</div>
+    <div *ngIf="nombre.errors?.['minlength']">Mínimo 3 caracteres</div>
+    </div>
+</div>
+
+<div>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" ngModel email required #email="ngModel">
+    <div class="error" *ngIf="email && email.invalid && email.touched">
+    <div *ngIf="email.errors?.['required']">Email es obligatorio</div>
+    <div *ngIf="email.errors?.['email']">Email no válido</div>
+    </div>
+</div>
+
+<div>
+    <label for="edad">Edad</label>
+    <input id="edad" name="edad" ngModel required type="number" min="18" #edad="ngModel">
+    <div class="error" *ngIf="edad && edad.invalid && edad.touched">
+    <div *ngIf="edad.errors?.['required']">Edad es obligatorio</div>
+    <div *ngIf="edad.errors?.['min']">Mínimo 18</div>
+    </div>
+</div>
+
+<div>
+    <label for="placa">Placa</label>
+    <input type="text" id="placa" name="placa" ngModel required minlength = "6" #placa="ngModel">
+    <div class="error" *ngIf="placa && placa.invalid && placa.touched">
+    <div *ngIf="placa.errors?.['required']">Placa es obligatorio</div>
+    <div *ngIf="placa.errors?.['minlength']">La placa debe de ser de 6 caracteres</div>
+    </div>
+</div>
+
+<div>
+    <label for="vehiculo">Vehículo</label>
+    <select id="vehiculo" name="vehiculo" ngModel required #vehiculo="ngModel">
+      <option value="Auto">Auto</option>
+      <option value="Camioneta">Camioneta</option>
+      <option value="Moto">Moto</option>
+    </select>
+    <div class="error" *ngIf="vehiculo && vehiculo.invalid && vehiculo.touched">
+    <div *ngIf="vehiculo.errors?.['required']">Seleccione un vehículo</div>
+    </div>
+</div>
+
+<div>
+    <label for="horas">Horas</label>
+    <input id="horas" name="horas" ngModel required type="number" min="1" max="24" #horas="ngModel">
+    <div class="error" *ngIf="horas && horas.invalid && horas.touched">
+    <div *ngIf="horas.errors?.['required']">Horas es obligatorio</div>
+    <div *ngIf="horas.errors?.['min']">Mínimo 1</div>
+    <div *ngIf="horas.errors?.['max']">Máximo 24</div>
+    </div>
+</div>
+
+<div>
+    <label>Pago</label>
+    <input type="radio" id="efectivo" name="pago" value="Efectivo" ngModel required>
+    <label for="efectivo">Efectivo</label>
+    <input type="radio" id="tarjeta" name="pago" value="Tarjeta" ngModel required>
+    <label for="tarjeta">Tarjeta</label>
+</div>
+
+<div>
+    <label for="observaciones">Observaciones</label>
+    <textarea id="observaciones" name="observaciones" ngModel required #observaciones="ngModel"></textarea>
+    <div class="error" *ngIf="observaciones && observaciones.invalid && observaciones.touched">
+    <div *ngIf="observaciones.errors?.['required']">Observaciones es obligatorio</div>
+    </div>
+</div>
+
+<button type="submit" [disabled]="miForm.invalid">Enviar</button>
+</form>
+
+<table>
+  <tr>
+    <th>Nombre</th><th>Email</th><th>Edad</th><th>Placa</th>
+    <th>Vehículo</th><th>Horas</th><th>Pago</th><th>Observaciones</th>
+  </tr>
+  <tr *ngFor="let x of lista">
+    <td>{{ x.nombre }}</td><td>{{ x.email }}</td><td>{{ x.edad }}</td><td>{{ x.placa }}</td>
+    <td>{{ x.vehiculo }}</td><td>{{ x.horas }}</td><td>{{ x.pago }}</td><td>{{ x.observaciones }}</td>
+  </tr>
+</table>

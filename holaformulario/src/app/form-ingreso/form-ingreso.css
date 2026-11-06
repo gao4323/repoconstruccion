@@ -1,0 +1,71 @@
+:host {
+  display: block;
+  max-width: 900px;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+form {
+  background: #f3f4f6;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+form div {
+  margin-bottom: 14px;
+}
+
+label {
+  display: inline-block;
+  min-width: 110px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  padding: 6px 10px;
+  border: 1px solid #9ca3af;
+  border-radius: 4px;
+  width: 220px;
+}
+
+input[type="radio"] {
+  width: auto;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+}
+
+button:disabled {
+  background: #9ca3af;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 14px;
+}
+
+table {
+  margin: 25px auto 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+}
+
+th {
+  background: #2563eb;
+  color: white;
+}
+
+tr:nth-child(even) td {
+  background: #f9fafb;
+}
